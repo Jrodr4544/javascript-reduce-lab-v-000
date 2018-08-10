@@ -29,7 +29,7 @@ var accumulatorCallback = (accumulator, currentValue) => {return accumulator + c
 var totalBatteries = batteryBatches.reduce(accumulatorCallback, 0);
 
 var wordCountCallback = (currentValue, sentence) => {
-  const result = {};
+;
   // debugger
   // console.log(sentence)
   let wordCount = sentence.split(' ').length;

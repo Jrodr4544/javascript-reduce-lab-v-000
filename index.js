@@ -42,7 +42,7 @@ var wordCountCallback = (currentValue, sentence) => {
     currentValue[wordCount] = 1;
   }
 
-  return result
+  return currentValue
 }
 
 var wordCountMap = monologueLines.reduce(wordCountCallback, 0);

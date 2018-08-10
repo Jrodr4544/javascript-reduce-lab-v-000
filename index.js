@@ -16,3 +16,33 @@ const monologueLines = [
   'No.',
   'I am the one who knocks!'
 ];
+
+const couponLocations = [
+  { room: 'Living room', amount: 5 },
+  { room: 'Kitchen', amount: 2 },
+  { room: 'Bathroom', amount: 1 },
+  { room: 'Master bedroom', amount: 7 }
+];
+ 
+var accumulatorCallback = (accumulator, currentValue) => {return accumulator + currentValue};
+
+var totalBatteries = batteryBatches.reduce(accumulatorCallback, 0);
+
+var wordCountCallback = (currentValue, sentence) => {
+  const result = {};
+  // debugger
+  // console.log(sentence)
+  let wordCount = sentence.split(' ').length;
+
+  var count = 0;
+  
+  if (result.hasOwnProperty(wordCount)) {
+    result[wordCount] += 1;
+  } else {
+    result[wordCount] = 1;
+  }
+
+  return result
+}
+
+var wordCountMap = monologueLines.reduce(wordCountCallback, 0);

@@ -36,10 +36,10 @@ var wordCountCallback = (currentValue, sentence) => {
 
   var count = 0;
   
-  if (result.hasOwnProperty(wordCount)) {
-    result[wordCount] += 1;
+  if (currentValue.hasOwnProperty(wordCount)) {
+    currentValue[wordCount] += 1;
   } else {
-    result[wordCount] = 1;
+    currentValue[wordCount] = 1;
   }
 
   return result

@@ -30,8 +30,6 @@ var totalBatteries = batteryBatches.reduce(accumulatorCallback, 0);
 
 var wordCountCallback = (currentValue, sentence) => {
 
-  // debugger
-  // console.log(sentence)
   let wordCount = sentence.split(' ').length;
 
   var count = 0;
